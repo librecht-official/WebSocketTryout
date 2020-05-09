@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="9nR-BS-2ae" customClass="IncomingTextMessageView" customModule="WebSocketTryout" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duc-eJ-JSp">
+                    <rect key="frame" x="20" y="16.5" width="314" height="124.5"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Multiline message Multiline message Multiline message Multiline message " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HtD-GC-XgM">
+                            <rect key="frame" x="16" y="8" width="282" height="108.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="HtD-GC-XgM" firstAttribute="leading" secondItem="Duc-eJ-JSp" secondAttribute="leading" constant="16" id="N2f-zb-D8M"/>
+                        <constraint firstItem="HtD-GC-XgM" firstAttribute="top" secondItem="Duc-eJ-JSp" secondAttribute="top" constant="8" id="fhd-fh-Jga"/>
+                        <constraint firstAttribute="bottom" secondItem="HtD-GC-XgM" secondAttribute="bottom" constant="8" id="m7u-NI-4TL"/>
+                        <constraint firstAttribute="trailing" secondItem="HtD-GC-XgM" secondAttribute="trailing" constant="16" id="xTo-7C-6IR"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="750" text="Sender name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTh-Cu-Lee">
+                    <rect key="frame" x="20" y="0.0" width="374" height="14.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="14.5" id="Gde-aV-501"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Duc-eJ-JSp" firstAttribute="leading" secondItem="9nR-BS-2ae" secondAttribute="leadingMargin" id="91a-i9-5PX"/>
+                <constraint firstItem="Duc-eJ-JSp" firstAttribute="top" secondItem="pTh-Cu-Lee" secondAttribute="bottom" constant="2" id="9FT-oj-jEM"/>
+                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Duc-eJ-JSp" secondAttribute="trailing" constant="60" id="Gm8-y4-kBg"/>
+                <constraint firstItem="pTh-Cu-Lee" firstAttribute="top" secondItem="9nR-BS-2ae" secondAttribute="top" id="NN2-Qx-evK"/>
+                <constraint firstAttribute="trailingMargin" secondItem="pTh-Cu-Lee" secondAttribute="trailing" id="ZPR-8I-Cyf"/>
+                <constraint firstItem="pTh-Cu-Lee" firstAttribute="leading" secondItem="Duc-eJ-JSp" secondAttribute="leading" id="eAg-dG-eBW"/>
+                <constraint firstAttribute="bottom" secondItem="Duc-eJ-JSp" secondAttribute="bottom" constant="4" id="plC-QG-z0C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bubbleView" destination="Duc-eJ-JSp" id="o1D-hG-D4R"/>
+                <outlet property="senderLabel" destination="pTh-Cu-Lee" id="M6D-dq-amW"/>
+                <outlet property="textLabel" destination="HtD-GC-XgM" id="sID-RM-z7n"/>
+            </connections>
+            <point key="canvasLocation" x="0.0" y="140.95982142857142"/>
+        </view>
+    </objects>
+</document>
